@@ -42,10 +42,10 @@ export function PackOpening({ cards, onComplete }: PackOpeningProps) {
 
   return (
     <VStack spacing={8} align="center" w="100%">
-      <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+      <Text fontSize={["lg", "xl", "2xl"]} fontWeight="bold" textAlign="center">
         Cliquez sur les cartes pour les retourner, puis cliquez à nouveau pour les retirer !
       </Text>
-      <Box position="relative" w="300px" h="400px">
+      <Box position="relative" w={["250px", "300px"]} h={["350px", "400px"]}>
         <AnimatePresence>
           {cards.map((card, index) => {
             const isFlipped = flippedCards.includes(index);
