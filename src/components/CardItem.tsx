@@ -49,11 +49,12 @@ export function CardItem({ card, isNew = false, count }: CardItemProps) {
         style={{ x, y, rotateX, rotateY, transformPerspective: 1200 }}
         drag
         dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        dragElastic={0.1}
+        dragElastic={0.7}
+        whileTap={{ cursor: 'grabbing' }}
+        w={["200px", "250px", "300px"]}
+        h={["280px", "350px", "400px"]}
+        cursor="grab"
         onClick={onOpen}
-        cursor="pointer"
       >
         <Box
           position="relative"
