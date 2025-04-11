@@ -51,13 +51,15 @@ export function CardItem({ card, isNew = false, count }: CardItemProps) {
         dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
         dragElastic={0.7}
         whileTap={{ cursor: 'grabbing' }}
-        w={["200px", "250px", "300px"]}
-        h={["280px", "350px", "400px"]}
+        w={["180px", "220px", "300px"]}
+        h={["252px", "308px", "400px"]}
         cursor="grab"
         onClick={onOpen}
       >
         <Box
           position="relative"
+          width="100%"
+          height="100%"
           borderRadius="lg"
           overflow="hidden"
           boxShadow="lg"
@@ -65,13 +67,13 @@ export function CardItem({ card, isNew = false, count }: CardItemProps) {
           border="2px solid"
           borderColor={getRarityColor(card.rarity)}
           transform={isNew ? 'scale(1.05)' : 'scale(1)'}
-          transition="transform 0.2s"
+          transition="transform 0.6s"
         >
           <Image
             src={card.imageUrl}
             alt={card.name}
-            w="100%"
-            h="auto"
+            width="100%"
+            height="100%"
             objectFit="cover"
             draggable={false}
           />
